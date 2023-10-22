@@ -2,25 +2,28 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Box-sizing é importante para lidar com margens e preenchimentos em layouts responsivos. */
 }
 
 body {
     background-image: linear-gradient(to right, rgb(255, 211, 129), rgb(255, 249, 224));
+    margin: 0;
 }
 
 header, footer{
     background-image: linear-gradient(to bottom, #463239, #6d525b);
     color: white;
     text-align: center;
-    padding: 50px;
+    padding: 30px;
     box-shadow: 8px 7px 15px -2px rgba(71, 14, 14, 0.13);
 }
 
-header > h1 {
-    font-size: 3em;
+header h1 {
+    font-size: 3em; /* Reduzi um pouco o tamanho da fonte. */
+    margin: 10px;
 }
 
-a {
+header a {
     text-decoration: none;
     color: white;
 }
@@ -28,54 +31,56 @@ a {
 main {
     background-color: white;
     margin: auto;
-    min-width: 200px;
-    max-width: 615px;
     min-height: 90vh;
-    padding: 10px 10px 80px 10px;
-    box-shadow: 8px 7px 15px -2px rgba(71, 14, 14, 0.13);
+    max-width: 90vh;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
 }
-section div.mensagem{
+
+section div.mensagem {
+    min-width: 40%;
+    max-width: 80%;
     color: white;
     padding: 20px;
     margin: 10px;
-    width: 450px;
-    box-shadow: 8px 7px 15px -2px rgba(0, 0, 0, 0.5);
 }
 
 section div#user {
     background-color: #5d8f99;
     text-align: right;
-    margin-left: 15%;
-    border-radius: 25px 25px 0px;
+    border-radius: 15px 15px 0 15px; 
+    margin-left: auto;
 }
 
 section div#bot {
     background-color: #ac304d;
     text-align: left;
-    margin-right: 15%;
-    border-radius: 0px 25px 25px;
+    border-radius: 15px 15px 15px 0; 
+    margin-right: auto;
 }
-
 
 div#forms {
     position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
     margin: auto;
-    width: 590px;
-    background-color: #fff; /* Cor de fundo para destacar o campo */
+    max-width: 90vh; /* Ocupa toda a largura da tela. */
+    background-color: #fff;
     padding: 10px;
-    border-top: 1px solid #ccc; /* Adicione uma linha superior para separá-lo do conteúdo */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Sombra no canto inferior. */
 }
 
 div#forms > div > input#msg {
     height: 40px;
-    width: 470px;
+    width: 74%; /* Use uma porcentagem da largura para se adaptar a diferentes telas. */
     padding: 4px;
     border-radius: 20px;
 }
 
 div#forms > div > input#enviar {
-    height: 50px;
-    width: 70px;
+    height: 40px; /* Mantive a altura semelhante à do campo de entrada. */
+    width: 20%; /* Use uma porcentagem da largura para se adaptar a diferentes telas. */
     border-radius: 20px;
 }
