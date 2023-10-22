@@ -1,4 +1,81 @@
 * {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(255, 211, 129), rgb(255, 249, 224));
+}
+
+header, footer{
+    background-image: linear-gradient(to bottom, #463239, #6d525b);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    box-shadow: 8px 7px 15px -2px rgba(71, 14, 14, 0.13);
+}
+
+header > h1 {
+    font-size: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    background-color: white;
+    margin: auto;
+    min-width: 200px;
+    max-width: 615px;
+    min-height: 90vh;
+    padding: 10px 10px 80px 10px;
+    box-shadow: 8px 7px 15px -2px rgba(71, 14, 14, 0.13);
+}
+section div.mensagem{
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 450px;
+    box-shadow: 8px 7px 15px -2px rgba(0, 0, 0, 0.5);
+}
+
+section div#user {
+    background-color: #5d8f99;
+    text-align: right;
+    margin-left: 15%;
+    border-radius: 25px 25px 0px;
+}
+
+section div#bot {
+    background-color: #ac304d;
+    text-align: left;
+    margin-right: 15%;
+    border-radius: 0px 25px 25px;
+}
+
+
+div#forms {
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    width: 590px;
+    background-color: #fff; /* Cor de fundo para destacar o campo */
+    padding: 10px;
+    border-top: 1px solid #ccc; /* Adicione uma linha superior para separá-lo do conteúdo */
+}
+
+div#forms > div > input#msg {
+    height: 40px;
+    width: 470px;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+div#forms > div > input#enviar {
+    height: 50px;
+    width: 70px;
+    border-radius: 20px;
 }

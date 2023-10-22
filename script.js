@@ -6,12 +6,14 @@ function multiplicarString(string, num) {
     return res
 }
 
+
 function enviar() {
     let mensagem = document.getElementById('msg').value
     let espacoMensagem = document.getElementById('mensagens')
     
-    espacoMensagem.innerHTML += `<div><p>${mensagem}</p></div>`
+    espacoMensagem.innerHTML += `<div class='mensagem' id='user'><p>${mensagem}</p></div>`
 
+    espacoMensagem.scrollTop = espacoMensagem.scrollHeight;
     setTimeout(botenviar, 3000)
 }
 
@@ -20,5 +22,5 @@ function botenviar() {
     let text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut eius illo ratione nihil!'
     let espacoMensagem = document.getElementById('mensagens')
 
-    espacoMensagem.innerHTML += `<div><p>${multiplicarString(text, num)}</p></div>`
+    espacoMensagem.innerHTML += `<div class='mensagem' id='bot'><p>${multiplicarString(text, num)}</p></div>`
 }
